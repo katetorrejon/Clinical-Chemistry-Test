@@ -114,26 +114,27 @@ public class SwingGUI extends JFrame {
         subheading = new JLabel("Select test/tests to conduct:");
         subheading.setFont(new Font("Tahoma", Font.BOLD, 14));
 
-        fbs = new JCheckBox("Fasting Blood Sugar"); 
-        rbs = new JCheckBox("Random Blood Sugar"); 
-        totalChol = new JCheckBox("Total Cholesterol"); 
-        hdl = new JCheckBox("HDL"); 
-        ldl = new JCheckBox("LDL"); 
-        triglycerides = new JCheckBox("Triglycerides"); 
-        creatinine = new JCheckBox("Creatinine"); 
-        uricAcid = new JCheckBox("Uric Acid"); 
-        bun = new JCheckBox("Blood Urea Nitrogen"); 
-        ast_sgot = new JCheckBox("AST / SGOT"); 
-        alt_sgpt = new JCheckBox("ALT / SGPT"); 
-        sodium = new JCheckBox("Sodium"); 
-        potassium = new JCheckBox("Potassium"); 
-        chloride = new JCheckBox("Chloride"); 
-        totalCal = new JCheckBox("Total Calcium"); 
-        ionizedCal = new JCheckBox("Ionized Calcium"); 
+        fbs = new JCheckBox("Fasting Blood Sugar"); fbs.setFocusable(false);
+        rbs = new JCheckBox("Random Blood Sugar"); rbs.setFocusable(false);
+        totalChol = new JCheckBox("Total Cholesterol"); totalChol.setFocusable(false);
+        hdl = new JCheckBox("HDL"); hdl.setFocusable(false);
+        ldl = new JCheckBox("LDL"); ldl.setFocusable(false);
+        triglycerides = new JCheckBox("Triglycerides"); triglycerides.setFocusable(false);
+        creatinine = new JCheckBox("Creatinine"); creatinine.setFocusable(false);
+        uricAcid = new JCheckBox("Uric Acid"); uricAcid.setFocusable(false);
+        bun = new JCheckBox("Blood Urea Nitrogen"); bun.setFocusable(false);
+        ast_sgot = new JCheckBox("AST / SGOT"); ast_sgot.setFocusable(false);
+        alt_sgpt = new JCheckBox("ALT / SGPT"); alt_sgpt.setFocusable(false);
+        sodium = new JCheckBox("Sodium"); sodium.setFocusable(false);
+        potassium = new JCheckBox("Potassium"); potassium.setFocusable(false);
+        chloride = new JCheckBox("Chloride"); chloride.setFocusable(false);
+        totalCal = new JCheckBox("Total Calcium"); totalCal.setFocusable(false);
+        ionizedCal = new JCheckBox("Ionized Calcium"); ionizedCal.setFocusable(false);
 
         submitInfo = new JButton("Get Results");
         submitInfo.setFont(new Font("Tahoma", Font.BOLD, 14));
         submitInfo.setBackground(Color.LIGHT_GRAY);
+        submitInfo.setFocusable(false);
 
         // Adding stuff
 
