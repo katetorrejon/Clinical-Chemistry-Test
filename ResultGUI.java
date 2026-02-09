@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.Period;
 
 public class ResultGUI extends JFrame {
-    private JPanel headPanel, infoPanel, headingPanel, bodyPanel;
+    private JPanel headPanel, infoPanel, headingPanel, bodyPanel, footerPanel;
     private JPanel infoRow1, infoRow2, testColumn, resultColumn, rangeColumn, interpretationColumn;
     private JLabel patientName, birthdate, patientAge, patientSex, collectionTime, doctorName;
     private JLabel mainHeader, subHeader, testHeader, resultHeader, rangeHeader, interpretationHeader;
@@ -17,7 +17,7 @@ public class ResultGUI extends JFrame {
     public ResultGUI(String pn, String pdob, String ps, String dn, ArrayList<FinalResult> finalResults) {
         this.setTitle("Clinical Chemistry Test Results");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(900, 800);
+        this.setSize(900, 840);
         this.setResizable(false);
         this.setLayout(new BorderLayout());
 
@@ -66,6 +66,10 @@ public class ResultGUI extends JFrame {
         interpretationColumn.setPreferredSize(new Dimension(150, 600));
         interpretationColumn.setLayout(new BoxLayout(interpretationColumn, BoxLayout.Y_AXIS));
         interpretationColumn.setBorder(new EmptyBorder(0, 8, 0, 0));
+
+        footerPanel = new JPanel();
+        footerPanel.setBackground(new Color(50, 88, 168));
+        footerPanel.setPreferredSize(new Dimension(900, 40));
 
         // Date Stuff
 
@@ -208,6 +212,7 @@ public class ResultGUI extends JFrame {
 
         this.add(headPanel, BorderLayout.NORTH);
         this.add(bodyPanel, BorderLayout.CENTER);
+        this.add(footerPanel, BorderLayout.SOUTH);
 
         this.setVisible(true);
     }
